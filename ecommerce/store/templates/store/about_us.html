@@ -1,0 +1,38 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">About Us</h2>
+                    <p class="card-text">
+                        Si lindi Laps & Letër?
+                    </p>
+                    <p class="card-text">
+                        Laps & Letër lindi si një nevojë për organizim dhe motivim. U krijua nga ne, dy të vetëpunësuara pa kornizat e orareve zyrtare, në përpjekje për të gjetur balancën mes kaosit dhe për të menaxhuar kohën në mënyrën më efikase. Pasi e provuam vetë ndryshimin që solli ky planer në jetën tonë, vendosëm ta ndanim me ju, për t'ju ndihmuar që ditë pas dite të përmirësoni veten tuaj. "Planifiko ditën" nuk është thjesht një trend estetik, por është para së gjithash një planer i studiuar dhe i testuar nga profesionistë.
+                    </p>
+                    <p class="card-text">
+                        Për ju që shkoni çdo ditë përtej kufijve tuaj! Këto produkte i dedikohen të gjithë punës tuaj të palodhur, për t'ju kujtuar se çdo gjë është e mundur. Vazhdoni të punoni fort, të ndriçoni botën dhe të përmbushni ëndrrat tuaja me forcë dhe përkushtim të jashtëzakonshëm!
+                    </p>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h1 class="card-title text-center">{{ video.title }}</h1>
+                    <div class="text-center">
+                        <video class="mt-3" width="100%" controls>
+                            <source src="/media/videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="card-text text-center mt-3">{{ video.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

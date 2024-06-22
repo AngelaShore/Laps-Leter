@@ -1,0 +1,22 @@
+<!-- store/product_detail.html -->
+
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <img class="card-img-top" src="{{ product.imageURL }}" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h2 class="card-title">{{ product.name }}</h2>
+                    <p class="card-text">{{ product.description }}</p>
+                    <h4 class="card-text"><strong>${{ product.price }}</strong></h4>
+                    <button data-product="{{ product.id }}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

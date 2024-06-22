@@ -1,0 +1,21 @@
+<!-- store/templates/store/payment_success.html -->
+
+{% extends 'store/main.html' %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Payment Successful</h3>
+                    <p class="text-center">Thank you for your payment!</p>
+                    <p class="text-center">Your order has been successfully processed.</p>
+                    <div class="text-center mt-4">
+                        <a href="{% url 'store' %}" class="btn btn-primary">Back to Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
